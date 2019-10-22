@@ -8,24 +8,23 @@ import (
 )
 
 func indexHandler(context *router.Context) {
-	// http.ServeFile(context.ResponseWriter, context.Request, filepath.Join(buildDir, "index.html"))
-	context.ResponseWriter.Write([]byte("Lord Knight lives off his legacy! GET"))
+	context.ResponseWriter.Write([]byte("GET handler call."))
 }
 
 func postHandler(context *router.Context) {
-	context.ResponseWriter.Write([]byte("Lord Knight lives off his legacy! POST"))
+	context.ResponseWriter.Write([]byte("POST handler call"))
 }
 
 func putHandler(context *router.Context) {
-	context.ResponseWriter.Write([]byte("Lord Knight lives off his legacy! PUT"))
+	context.ResponseWriter.Write([]byte("PUT handler call."))
 }
 
 func patchHandler(context *router.Context) {
-	context.ResponseWriter.Write([]byte("Lord Knight lives off his legacy! PATCH"))
+	context.ResponseWriter.Write([]byte("PATCH handler call."))
 }
 
 func deleteHandler(context *router.Context) {
-	context.ResponseWriter.Write([]byte("Lord Knight lives off his legacy! DELETE"))
+	context.ResponseWriter.Write([]byte("DELETE handler call."))
 }
 
 func logRequest(handler http.Handler) http.Handler {

@@ -32,7 +32,7 @@ func (router *Router) Get(pattern string, handleFunc func(*Context)) {
 	} else {
 		handler, ok = h.(HandlerInterface)
 		if !ok {
-			fmt.Println("We got some shit to fix")
+			fmt.Println("Error for Router::Get function")
 		}
 	}
 	handler.Get(handleFunc)
@@ -49,7 +49,7 @@ func (router *Router) Post(pattern string, handleFunc func(*Context)) {
 	} else {
 		handler, ok = h.(HandlerInterface)
 		if !ok {
-			fmt.Println("We got some shit to fix")
+			fmt.Println("Error for Router::Post function")
 		}
 	}
 	handler.Post(handleFunc)
@@ -66,7 +66,7 @@ func (router *Router) Put(pattern string, handleFunc func(*Context)) {
 	} else {
 		handler, ok = h.(HandlerInterface)
 		if !ok {
-			fmt.Println("We got some shit to fix")
+			fmt.Println("Error for Router::Put function")
 		}
 	}
 	handler.Put(handleFunc)
@@ -83,7 +83,7 @@ func (router *Router) Patch(pattern string, handleFunc func(*Context)) {
 	} else {
 		handler, ok = h.(HandlerInterface)
 		if !ok {
-			fmt.Println("We got some shit to fix")
+			fmt.Println("Error for Router::Patch function")
 		}
 	}
 	handler.Patch(handleFunc)
@@ -100,7 +100,7 @@ func (router *Router) Delete(pattern string, handleFunc func(*Context)) {
 	} else {
 		handler, ok = h.(HandlerInterface)
 		if !ok {
-			fmt.Println("We got some shit to fix")
+			fmt.Println("Error for Router::Delete function")
 		}
 	}
 	handler.Delete(handleFunc)

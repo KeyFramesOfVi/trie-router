@@ -31,10 +31,6 @@ func NewPlatform() *Platform {
 
 	p.Connect()
 
-	// p.Setup()
-
-	// p.Api = NewAPI(p.config, p.db)
-
 	if p.config.DevEnv {
 		p.Info("Server running in Development mode")
 	} else {
@@ -85,6 +81,4 @@ func (p *Platform) Start() {
 	mux.Patch("/patch", patchHandler)
 	mux.Delete("/delete", deleteHandler)
 	log.Fatal(http.ListenAndServe(":8080", mux))
-
-	// mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir(filepath.Join(buildDir, "static")))))
 }

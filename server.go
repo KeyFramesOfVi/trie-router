@@ -7,7 +7,7 @@ import (
 func main() {
 	p := core.NewPlatform()
 
-	p.Success("Fire Emblem Calculator daemon running...\n")
+	p.Success("Server running...\n")
 
 	p.Start()
 }
